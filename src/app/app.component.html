@@ -1,21 +1,28 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="card-deck">
 
-<router-outlet></router-outlet>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title text-center">Game Of Thrones</h5>
+      <p class="card-text text-center">Season 6, Episode 5</p>
+        <img class="card-img-bottom" src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="Card image cap">
+      <p class="card-text"><small class="text-muted">3 people reacted on this</small></p>
+      <hr>
+      <div class="row">
+        <div class="col col-md-4">
+          <ng-template #popContent>
+            <div class="row">
+              <img height="30px" src="assets/images/like.png" alt="">
+              <img height="30px" src="assets/images/haha.png" alt="">
+              <img height="30px" src="assets/images/wow.png" alt="">
+              <img height="30px" src="assets/images/sad.png" alt="">
+              <img height="30px" src="assets/images/angry.png" alt="">
+            </div>
+          </ng-template>
+          <p [ngbPopover]="popContent">
+            <img height="30px" src="assets/images/like.png" alt="" > Vote
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
