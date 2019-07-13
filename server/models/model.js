@@ -16,7 +16,6 @@ mongoose.connect('mongodb://viberuser:viberpass123@ds249967.mlab.com:49967/viber
 // =======
 
 const roomsSchema = new Schema({
-    _id: Schema.Types.ObjectId,
     title: String,
     season: Number,
     episode: Number,
