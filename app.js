@@ -28,8 +28,15 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname + '/frontend/dist/vote-demo/index.html'));
+});
+
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
 app.use('/api/rooms', require('./models/crud')(models.Rooms));
 
 // catch 404 and forward to error handler
